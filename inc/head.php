@@ -44,3 +44,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
  <body class="sticky-header left-side-collapsed"  onload="initMap()">
     <section>
+        <?php include 'inc/aside.php'; ?>
+        <!-- main content start-->
+		<div class="main-content">
+            <?php include 'inc/header.php'; ?>
+            <div id="page-wrapper">
