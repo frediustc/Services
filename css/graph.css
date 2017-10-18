@@ -109,7 +109,7 @@ http://vladimirkudinov.com
 	margin-bottom:1em;
 }
 
-@media (max-width:1280px){		
+@media (max-width:1280px){
 	.graph-container {
 		height: 100px;
 	}
@@ -126,4 +126,7 @@ http://vladimirkudinov.com
 	.graph-container {
 		height: auto;
 	}
+}
+.profile_details_drop {
+	width: 200px;
 }

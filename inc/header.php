@@ -14,7 +14,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
                              <div class="user-name">
-                                <p>Michael<span>Administrator</span></p>
+                                <p><?php echo $_SESSION['n'] ?><span><?php echo $_SESSION['u'] ?></span></p>
                              </div>
                              <i class="lnr lnr-chevron-down"></i>
                              <i class="lnr lnr-chevron-up"></i>
@@ -22,9 +22,9 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu drp-mnu">
-                        <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                        <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li>
-                        <li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                        <!-- <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+                        <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li> -->
+                        <li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
                     </ul>
                 </li>
                 <div class="clearfix"> </div>

@@ -18,7 +18,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $emp = $db->prepare('SELECT * FROM users WHERE type = "Customers" ORDER BY name');
+                        $emp = $db->prepare('SELECT * FROM users WHERE type = "Customer" ORDER BY name');
                         $emp->execute();
                         while ($e = $emp->fetch()) { ?>
                         <tr>

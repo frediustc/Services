@@ -1,4 +1,16 @@
-<?php include 'inc/db.php'; ?>
+<?php include 'inc/db.php';
+if(isset($_SESSION['id'])){
+	if(isset($log)){
+		header('location: account.php');
+	}
+
+}
+else {
+	if(!isset($log)){
+		header('location: logout.php');
+	}
+}
+?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -29,6 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //chart -->
 <!--animate-->
 <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
 <script src="js/wow.min.js"></script>
 	<script>
 		 new WOW().init();
@@ -38,15 +51,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 <!---//webfonts--->
  <!-- Meters graphs -->
-<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 
 </head>
 
  <body class="sticky-header left-side-collapsed"  onload="initMap()">
     <section>
-        <?php include 'inc/aside.php'; ?>
+		<?php if (!isset($log)): ?>
+			<?php include 'inc/aside.php'; ?>
+		<?php endif; ?>
         <!-- main content start-->
 		<div class="main-content">
-            <?php include 'inc/header.php'; ?>
+			<?php if (!isset($log)): ?>
+				<?php include 'inc/header.php'; ?>
+			<?php endif; ?>
             <div id="page-wrapper">
